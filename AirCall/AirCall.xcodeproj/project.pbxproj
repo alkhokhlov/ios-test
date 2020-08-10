@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		420F76D824DD5448004A097B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 420F76DA24DD5448004A097B /* Localizable.strings */; };
+		420F76DE24DD8468004A097B /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F76DD24DD8468004A097B /* Call.swift */; };
+		420F76E124DD8932004A097B /* CallListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F76E024DD8932004A097B /* CallListInteractor.swift */; };
+		420F76E424DD92BA004A097B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F76E324DD92BA004A097B /* NetworkManager.swift */; };
+		420F76E624DD92C3004A097B /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F76E524DD92C3004A097B /* APIEndpoint.swift */; };
+		420F76E824DD96D0004A097B /* AirCallGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F76E724DD96D0004A097B /* AirCallGateway.swift */; };
+		420F76EA24DD9D93004A097B /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F76E924DD9D93004A097B /* DependencyProvider.swift */; };
+		422DFFEB24E008A2001C7661 /* CallListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422DFFEA24E008A2001C7661 /* CallListInteractorTests.swift */; };
+		422DFFED24E01B34001C7661 /* DependencyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422DFFEC24E01B34001C7661 /* DependencyProviderTests.swift */; };
+		425D462624DC9FF4009190B5 /* CallsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D462524DC9FF4009190B5 /* CallsList.swift */; };
+		425D462824DCA2FF009190B5 /* NavigationShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D462724DCA2FF009190B5 /* NavigationShadow.swift */; };
+		425D462A24DCA311009190B5 /* CallDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D462924DCA311009190B5 /* CallDetailActions.swift */; };
+		425D462C24DCA322009190B5 /* CallDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D462B24DCA322009190B5 /* CallDetailHeader.swift */; };
+		42ADD65624E14F3300D77184 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADD65524E14F3300D77184 /* General.swift */; };
+		42E3ED3724DDBD0600FDC9D7 /* CallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED3624DDBD0600FDC9D7 /* CallResponse.swift */; };
+		42E3ED3A24DDD47E00FDC9D7 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED3924DDD47E00FDC9D7 /* DateConverter.swift */; };
+		42E3ED3C24DDE20B00FDC9D7 /* CallFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED3B24DDE20B00FDC9D7 /* CallFilter.swift */; };
+		42E3ED3E24DEC52C00FDC9D7 /* PersistanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED3D24DEC52C00FDC9D7 /* PersistanceStore.swift */; };
+		42E3ED4124DEC71800FDC9D7 /* CallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED4024DEC71800FDC9D7 /* CallRepository.swift */; };
+		42E3ED4324DF280300FDC9D7 /* CallDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED4224DF280300FDC9D7 /* CallDetailInteractor.swift */; };
+		42E3ED4524DF583500FDC9D7 /* DoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED4424DF583500FDC9D7 /* DoneResponse.swift */; };
+		42E3ED4724DFF38300FDC9D7 /* CallDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED4624DFF38300FDC9D7 /* CallDetailInteractorTests.swift */; };
+		42E3ED4A24DFF58A00FDC9D7 /* MockAirCallGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED4924DFF58A00FDC9D7 /* MockAirCallGateway.swift */; };
+		42E3ED4C24DFF95900FDC9D7 /* MockCallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED4B24DFF95900FDC9D7 /* MockCallRepository.swift */; };
+		42E3ED4F24E002A500FDC9D7 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3ED4E24E002A500FDC9D7 /* XCTestCase+Extensions.swift */; };
+		42EC85A724DBFF6700D94C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85A624DBFF6700D94C30 /* AppDelegate.swift */; };
+		42EC85A924DBFF6700D94C30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85A824DBFF6700D94C30 /* SceneDelegate.swift */; };
+		42EC85AC24DBFF6700D94C30 /* AirCall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85AA24DBFF6700D94C30 /* AirCall.xcdatamodeld */; };
+		42EC85AE24DBFF6700D94C30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85AD24DBFF6700D94C30 /* ContentView.swift */; };
+		42EC85B024DBFF6900D94C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EC85AF24DBFF6900D94C30 /* Assets.xcassets */; };
+		42EC85B324DBFF6900D94C30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EC85B224DBFF6900D94C30 /* Preview Assets.xcassets */; };
+		42EC85B624DBFF6900D94C30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EC85B424DBFF6900D94C30 /* LaunchScreen.storyboard */; };
+		42EC85CC24DC002000D94C30 /* CallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85CB24DC002000D94C30 /* CallCell.swift */; };
+		42EC85D024DC068500D94C30 /* CallDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85CF24DC068500D94C30 /* CallDetail.swift */; };
+		42EC85D424DC08C300D94C30 /* UserIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85D324DC08C300D94C30 /* UserIcon.swift */; };
+		42EC85D624DC174600D94C30 /* DashedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85D524DC174600D94C30 /* DashedLine.swift */; };
+		42EC85D824DC1EF900D94C30 /* AssignCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85D724DC1EF900D94C30 /* AssignCallCell.swift */; };
+		42EC85DA24DC30DB00D94C30 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85D924DC30DB00D94C30 /* RoundedCorner.swift */; };
+		42EC85DE24DC36C400D94C30 /* NavigationSegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85DD24DC36C400D94C30 /* NavigationSegmentedPicker.swift */; };
+		42EC85E024DC553900D94C30 /* EdgeBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85DF24DC553900D94C30 /* EdgeBorder.swift */; };
+		42EC85E224DC7EA000D94C30 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85E124DC7EA000D94C30 /* NavigationConfigurator.swift */; };
+		42EC85E424DC7EC900D94C30 /* CallListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85E324DC7EC900D94C30 /* CallListHeader.swift */; };
+		42EC85E624DC84EC00D94C30 /* CorneredBorderedAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC85E524DC84EC00D94C30 /* CorneredBorderedAngle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42EC85BD24DBFF6900D94C30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42EC859B24DBFF6700D94C30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42EC85A224DBFF6700D94C30;
+			remoteInfo = AirCall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		420F76D924DD5448004A097B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		420F76DB24DD54A0004A097B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		420F76DC24DD54A0004A097B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		420F76DD24DD8468004A097B /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		420F76E024DD8932004A097B /* CallListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallListInteractor.swift; sourceTree = "<group>"; };
+		420F76E324DD92BA004A097B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		420F76E524DD92C3004A097B /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		420F76E724DD96D0004A097B /* AirCallGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirCallGateway.swift; sourceTree = "<group>"; };
+		420F76E924DD9D93004A097B /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		422DFFEA24E008A2001C7661 /* CallListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallListInteractorTests.swift; sourceTree = "<group>"; };
+		422DFFEC24E01B34001C7661 /* DependencyProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProviderTests.swift; sourceTree = "<group>"; };
+		425D462524DC9FF4009190B5 /* CallsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsList.swift; sourceTree = "<group>"; };
+		425D462724DCA2FF009190B5 /* NavigationShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationShadow.swift; sourceTree = "<group>"; };
+		425D462924DCA311009190B5 /* CallDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailActions.swift; sourceTree = "<group>"; };
+		425D462B24DCA322009190B5 /* CallDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailHeader.swift; sourceTree = "<group>"; };
+		42ADD65524E14F3300D77184 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		42E3ED3624DDBD0600FDC9D7 /* CallResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallResponse.swift; sourceTree = "<group>"; };
+		42E3ED3924DDD47E00FDC9D7 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		42E3ED3B24DDE20B00FDC9D7 /* CallFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFilter.swift; sourceTree = "<group>"; };
+		42E3ED3D24DEC52C00FDC9D7 /* PersistanceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceStore.swift; sourceTree = "<group>"; };
+		42E3ED4024DEC71800FDC9D7 /* CallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRepository.swift; sourceTree = "<group>"; };
+		42E3ED4224DF280300FDC9D7 /* CallDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailInteractor.swift; sourceTree = "<group>"; };
+		42E3ED4424DF583500FDC9D7 /* DoneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneResponse.swift; sourceTree = "<group>"; };
+		42E3ED4624DFF38300FDC9D7 /* CallDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetailInteractorTests.swift; sourceTree = "<group>"; };
+		42E3ED4924DFF58A00FDC9D7 /* MockAirCallGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAirCallGateway.swift; sourceTree = "<group>"; };
+		42E3ED4B24DFF95900FDC9D7 /* MockCallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCallRepository.swift; sourceTree = "<group>"; };
+		42E3ED4E24E002A500FDC9D7 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		42EC85A324DBFF6700D94C30 /* AirCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42EC85A624DBFF6700D94C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42EC85A824DBFF6700D94C30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		42EC85AB24DBFF6700D94C30 /* AirCall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AirCall.xcdatamodel; sourceTree = "<group>"; };
+		42EC85AD24DBFF6700D94C30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		42EC85AF24DBFF6900D94C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42EC85B224DBFF6900D94C30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		42EC85B524DBFF6900D94C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42EC85B724DBFF6900D94C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42EC85BC24DBFF6900D94C30 /* AirCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42EC85C224DBFF6900D94C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42EC85CB24DC002000D94C30 /* CallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCell.swift; sourceTree = "<group>"; };
+		42EC85CF24DC068500D94C30 /* CallDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetail.swift; sourceTree = "<group>"; };
+		42EC85D324DC08C300D94C30 /* UserIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIcon.swift; sourceTree = "<group>"; };
+		42EC85D524DC174600D94C30 /* DashedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLine.swift; sourceTree = "<group>"; };
+		42EC85D724DC1EF900D94C30 /* AssignCallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignCallCell.swift; sourceTree = "<group>"; };
+		42EC85D924DC30DB00D94C30 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		42EC85DD24DC36C400D94C30 /* NavigationSegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSegmentedPicker.swift; sourceTree = "<group>"; };
+		42EC85DF24DC553900D94C30 /* EdgeBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeBorder.swift; sourceTree = "<group>"; };
+		42EC85E124DC7EA000D94C30 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		42EC85E324DC7EC900D94C30 /* CallListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallListHeader.swift; sourceTree = "<group>"; };
+		42EC85E524DC84EC00D94C30 /* CorneredBorderedAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredBorderedAngle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42EC85A024DBFF6700D94C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42EC85B924DBFF6900D94C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		420F76DF24DD891B004A097B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				420F76E024DD8932004A097B /* CallListInteractor.swift */,
+				42E3ED4224DF280300FDC9D7 /* CallDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		420F76E224DD92AA004A097B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED3524DDBCEF00FDC9D7 /* Responses */,
+				420F76E324DD92BA004A097B /* NetworkManager.swift */,
+				420F76E524DD92C3004A097B /* APIEndpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		420F76EB24DDA109004A097B /* DependencyProvider */ = {
+			isa = PBXGroup;
+			children = (
+				420F76E924DD9D93004A097B /* DependencyProvider.swift */,
+			);
+			path = DependencyProvider;
+			sourceTree = "<group>";
+		};
+		420F76EE24DDA207004A097B /* Gateway */ = {
+			isa = PBXGroup;
+			children = (
+				420F76E724DD96D0004A097B /* AirCallGateway.swift */,
+			);
+			path = Gateway;
+			sourceTree = "<group>";
+		};
+		425D462D24DCA340009190B5 /* CallDetail */ = {
+			isa = PBXGroup;
+			children = (
+				425D462924DCA311009190B5 /* CallDetailActions.swift */,
+				425D462B24DCA322009190B5 /* CallDetailHeader.swift */,
+			);
+			path = CallDetail;
+			sourceTree = "<group>";
+		};
+		425D462E24DCA349009190B5 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85D324DC08C300D94C30 /* UserIcon.swift */,
+				42EC85D524DC174600D94C30 /* DashedLine.swift */,
+				42EC85DD24DC36C400D94C30 /* NavigationSegmentedPicker.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		42E3ED3524DDBCEF00FDC9D7 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED3624DDBD0600FDC9D7 /* CallResponse.swift */,
+				42E3ED4424DF583500FDC9D7 /* DoneResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		42E3ED3824DDD46B00FDC9D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED3924DDD47E00FDC9D7 /* DateConverter.swift */,
+				42ADD65524E14F3300D77184 /* General.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		42E3ED3F24DEC70300FDC9D7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED4024DEC71800FDC9D7 /* CallRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		42E3ED4824DFF57200FDC9D7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED4924DFF58A00FDC9D7 /* MockAirCallGateway.swift */,
+				42E3ED4B24DFF95900FDC9D7 /* MockCallRepository.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		42E3ED4D24E0029D00FDC9D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED4E24E002A500FDC9D7 /* XCTestCase+Extensions.swift */,
+				422DFFEC24E01B34001C7661 /* DependencyProviderTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		42EC859A24DBFF6700D94C30 = {
+			isa = PBXGroup;
+			children = (
+				42EC85A524DBFF6700D94C30 /* AirCall */,
+				42EC85BF24DBFF6900D94C30 /* AirCallTests */,
+				42EC85A424DBFF6700D94C30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42EC85A424DBFF6700D94C30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85A324DBFF6700D94C30 /* AirCall.app */,
+				42EC85BC24DBFF6900D94C30 /* AirCallTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42EC85A524DBFF6700D94C30 /* AirCall */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED3824DDD46B00FDC9D7 /* Utils */,
+				420F76EB24DDA109004A097B /* DependencyProvider */,
+				420F76DF24DD891B004A097B /* Interactor */,
+				42EC85F024DC868A00D94C30 /* Model */,
+				42EC85EF24DC867900D94C30 /* Screens */,
+				42EC85EE24DC866700D94C30 /* System */,
+				42EC85EC24DC861F00D94C30 /* Resources */,
+				42EC85E724DC859A00D94C30 /* View */,
+			);
+			path = AirCall;
+			sourceTree = "<group>";
+		};
+		42EC85BF24DBFF6900D94C30 /* AirCallTests */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED4D24E0029D00FDC9D7 /* Utils */,
+				42E3ED4824DFF57200FDC9D7 /* Mock */,
+				42EC85C224DBFF6900D94C30 /* Info.plist */,
+				422DFFEA24E008A2001C7661 /* CallListInteractorTests.swift */,
+				42E3ED4624DFF38300FDC9D7 /* CallDetailInteractorTests.swift */,
+			);
+			path = AirCallTests;
+			sourceTree = "<group>";
+		};
+		42EC85E724DC859A00D94C30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85EB24DC85FA00D94C30 /* Representable */,
+				42EC85EA24DC85D900D94C30 /* Common */,
+				42EC85E924DC85AE00D94C30 /* Shape */,
+				42EC85E824DC85A600D94C30 /* List */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42EC85E824DC85A600D94C30 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85CB24DC002000D94C30 /* CallCell.swift */,
+				42EC85D724DC1EF900D94C30 /* AssignCallCell.swift */,
+				42EC85E324DC7EC900D94C30 /* CallListHeader.swift */,
+				425D462524DC9FF4009190B5 /* CallsList.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		42EC85E924DC85AE00D94C30 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85D924DC30DB00D94C30 /* RoundedCorner.swift */,
+				42EC85DF24DC553900D94C30 /* EdgeBorder.swift */,
+				42EC85E524DC84EC00D94C30 /* CorneredBorderedAngle.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
+		42EC85EA24DC85D900D94C30 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				425D462E24DCA349009190B5 /* ContentView */,
+				425D462D24DCA340009190B5 /* CallDetail */,
+				425D462724DCA2FF009190B5 /* NavigationShadow.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		42EC85EB24DC85FA00D94C30 /* Representable */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85E124DC7EA000D94C30 /* NavigationConfigurator.swift */,
+			);
+			path = Representable;
+			sourceTree = "<group>";
+		};
+		42EC85EC24DC861F00D94C30 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85B224DBFF6900D94C30 /* Preview Assets.xcassets */,
+				42EC85AF24DBFF6900D94C30 /* Assets.xcassets */,
+				42EC85B424DBFF6900D94C30 /* LaunchScreen.storyboard */,
+				42EC85B724DBFF6900D94C30 /* Info.plist */,
+				420F76DA24DD5448004A097B /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		42EC85ED24DC865800D94C30 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85AA24DBFF6700D94C30 /* AirCall.xcdatamodeld */,
+				42E3ED3D24DEC52C00FDC9D7 /* PersistanceStore.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		42EC85EE24DC866700D94C30 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85A624DBFF6700D94C30 /* AppDelegate.swift */,
+				42EC85A824DBFF6700D94C30 /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		42EC85EF24DC867900D94C30 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				42EC85AD24DBFF6700D94C30 /* ContentView.swift */,
+				42EC85CF24DC068500D94C30 /* CallDetail.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		42EC85F024DC868A00D94C30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42E3ED3F24DEC70300FDC9D7 /* Repository */,
+				42EC85ED24DC865800D94C30 /* Persistance */,
+				420F76EE24DDA207004A097B /* Gateway */,
+				420F76E224DD92AA004A097B /* Networking */,
+				42E3ED3B24DDE20B00FDC9D7 /* CallFilter.swift */,
+				420F76DD24DD8468004A097B /* Call.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42EC85A224DBFF6700D94C30 /* AirCall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42EC85C524DBFF6900D94C30 /* Build configuration list for PBXNativeTarget "AirCall" */;
+			buildPhases = (
+				42EC859F24DBFF6700D94C30 /* Sources */,
+				42EC85A024DBFF6700D94C30 /* Frameworks */,
+				42EC85A124DBFF6700D94C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirCall;
+			productName = AirCall;
+			productReference = 42EC85A324DBFF6700D94C30 /* AirCall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42EC85BB24DBFF6900D94C30 /* AirCallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42EC85C824DBFF6900D94C30 /* Build configuration list for PBXNativeTarget "AirCallTests" */;
+			buildPhases = (
+				42EC85B824DBFF6900D94C30 /* Sources */,
+				42EC85B924DBFF6900D94C30 /* Frameworks */,
+				42EC85BA24DBFF6900D94C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42EC85BE24DBFF6900D94C30 /* PBXTargetDependency */,
+			);
+			name = AirCallTests;
+			productName = AirCallTests;
+			productReference = 42EC85BC24DBFF6900D94C30 /* AirCallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42EC859B24DBFF6700D94C30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Oleksandr Khokhlov";
+				TargetAttributes = {
+					42EC85A224DBFF6700D94C30 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					42EC85BB24DBFF6900D94C30 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 42EC85A224DBFF6700D94C30;
+					};
+				};
+			};
+			buildConfigurationList = 42EC859E24DBFF6700D94C30 /* Build configuration list for PBXProject "AirCall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+			);
+			mainGroup = 42EC859A24DBFF6700D94C30;
+			productRefGroup = 42EC85A424DBFF6700D94C30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42EC85A224DBFF6700D94C30 /* AirCall */,
+				42EC85BB24DBFF6900D94C30 /* AirCallTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42EC85A124DBFF6700D94C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42EC85B624DBFF6900D94C30 /* LaunchScreen.storyboard in Resources */,
+				420F76D824DD5448004A097B /* Localizable.strings in Resources */,
+				42EC85B324DBFF6900D94C30 /* Preview Assets.xcassets in Resources */,
+				42EC85B024DBFF6900D94C30 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42EC85BA24DBFF6900D94C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42EC859F24DBFF6700D94C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				420F76E424DD92BA004A097B /* NetworkManager.swift in Sources */,
+				42EC85E424DC7EC900D94C30 /* CallListHeader.swift in Sources */,
+				42E3ED4524DF583500FDC9D7 /* DoneResponse.swift in Sources */,
+				42EC85DA24DC30DB00D94C30 /* RoundedCorner.swift in Sources */,
+				42EC85AC24DBFF6700D94C30 /* AirCall.xcdatamodeld in Sources */,
+				42EC85E624DC84EC00D94C30 /* CorneredBorderedAngle.swift in Sources */,
+				425D462824DCA2FF009190B5 /* NavigationShadow.swift in Sources */,
+				425D462624DC9FF4009190B5 /* CallsList.swift in Sources */,
+				42EC85A724DBFF6700D94C30 /* AppDelegate.swift in Sources */,
+				42E3ED3A24DDD47E00FDC9D7 /* DateConverter.swift in Sources */,
+				42EC85D624DC174600D94C30 /* DashedLine.swift in Sources */,
+				42EC85D424DC08C300D94C30 /* UserIcon.swift in Sources */,
+				42ADD65624E14F3300D77184 /* General.swift in Sources */,
+				420F76E824DD96D0004A097B /* AirCallGateway.swift in Sources */,
+				42E3ED4324DF280300FDC9D7 /* CallDetailInteractor.swift in Sources */,
+				42EC85CC24DC002000D94C30 /* CallCell.swift in Sources */,
+				42E3ED3C24DDE20B00FDC9D7 /* CallFilter.swift in Sources */,
+				42EC85E024DC553900D94C30 /* EdgeBorder.swift in Sources */,
+				425D462A24DCA311009190B5 /* CallDetailActions.swift in Sources */,
+				420F76E624DD92C3004A097B /* APIEndpoint.swift in Sources */,
+				42E3ED4124DEC71800FDC9D7 /* CallRepository.swift in Sources */,
+				42EC85DE24DC36C400D94C30 /* NavigationSegmentedPicker.swift in Sources */,
+				420F76E124DD8932004A097B /* CallListInteractor.swift in Sources */,
+				42EC85AE24DBFF6700D94C30 /* ContentView.swift in Sources */,
+				42EC85A924DBFF6700D94C30 /* SceneDelegate.swift in Sources */,
+				42EC85D024DC068500D94C30 /* CallDetail.swift in Sources */,
+				425D462C24DCA322009190B5 /* CallDetailHeader.swift in Sources */,
+				42EC85E224DC7EA000D94C30 /* NavigationConfigurator.swift in Sources */,
+				42E3ED3724DDBD0600FDC9D7 /* CallResponse.swift in Sources */,
+				420F76DE24DD8468004A097B /* Call.swift in Sources */,
+				420F76EA24DD9D93004A097B /* DependencyProvider.swift in Sources */,
+				42EC85D824DC1EF900D94C30 /* AssignCallCell.swift in Sources */,
+				42E3ED3E24DEC52C00FDC9D7 /* PersistanceStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42EC85B824DBFF6900D94C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E3ED4F24E002A500FDC9D7 /* XCTestCase+Extensions.swift in Sources */,
+				42E3ED4C24DFF95900FDC9D7 /* MockCallRepository.swift in Sources */,
+				42E3ED4A24DFF58A00FDC9D7 /* MockAirCallGateway.swift in Sources */,
+				422DFFED24E01B34001C7661 /* DependencyProviderTests.swift in Sources */,
+				422DFFEB24E008A2001C7661 /* CallListInteractorTests.swift in Sources */,
+				42E3ED4724DFF38300FDC9D7 /* CallDetailInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42EC85BE24DBFF6900D94C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42EC85A224DBFF6700D94C30 /* AirCall */;
+			targetProxy = 42EC85BD24DBFF6900D94C30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		420F76DA24DD5448004A097B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				420F76D924DD5448004A097B /* en */,
+				420F76DC24DD54A0004A097B /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		42EC85B424DBFF6900D94C30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42EC85B524DBFF6900D94C30 /* Base */,
+				420F76DB24DD54A0004A097B /* fr */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42EC85C324DBFF6900D94C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		42EC85C424DBFF6900D94C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42EC85C624DBFF6900D94C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AirCall/Resources\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AirCall/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kh.AirCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		42EC85C724DBFF6900D94C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AirCall/Resources\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AirCall/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kh.AirCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		42EC85C924DBFF6900D94C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirCallTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kh.AirCallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirCall.app/AirCall";
+			};
+			name = Debug;
+		};
+		42EC85CA24DBFF6900D94C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirCallTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kh.AirCallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirCall.app/AirCall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42EC859E24DBFF6700D94C30 /* Build configuration list for PBXProject "AirCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42EC85C324DBFF6900D94C30 /* Debug */,
+				42EC85C424DBFF6900D94C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42EC85C524DBFF6900D94C30 /* Build configuration list for PBXNativeTarget "AirCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42EC85C624DBFF6900D94C30 /* Debug */,
+				42EC85C724DBFF6900D94C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42EC85C824DBFF6900D94C30 /* Build configuration list for PBXNativeTarget "AirCallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42EC85C924DBFF6900D94C30 /* Debug */,
+				42EC85CA24DBFF6900D94C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		42EC85AA24DBFF6700D94C30 /* AirCall.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				42EC85AB24DBFF6700D94C30 /* AirCall.xcdatamodel */,
+			);
+			currentVersion = 42EC85AB24DBFF6700D94C30 /* AirCall.xcdatamodel */;
+			path = AirCall.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 42EC859B24DBFF6700D94C30 /* Project object */;
+}

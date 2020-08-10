@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  AirCall
+
+  Created by Oleksandr Khokhlov on 8/7/20.
+  Copyright © 2020 Oleksandr Khokhlov. All rights reserved.
+*/
+
+"Activity" = "Activity";
+"All" = "All";
+"Inbox" = "Inbox";
+"Reset" = "Reset";
+"Which calls would you like to check ?" = "Which calls would you like to check ?";
+"missed" = "missed";
+"left a voicemail" = "left a voicemail";
+"by %@" = "by %@";
